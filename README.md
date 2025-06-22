@@ -8,15 +8,15 @@ This repository implements a **reinforcement learning (RL)** approach to select 
 
 We transmit over \(N = 64\) subcarriers, with cyclic prefix length \(CP\). For subcarrier \(k\):
 
-\[
+$\[
 \mathbf{y}[k] = \mathbf{H}[k] \mathbf{W} \mathbf{s}[k] + \mathbf{n}[k]
-\]
-
+\] $
+$
 - \(\mathbf{H}[k] \in \mathbb{C}^{2 \times 2}\): flat-fading channel  
 - \(\mathbf{W} \in \mathbb{C}^{2 \times 2}\): precoding matrix chosen from a codebook  
 - \(\mathbf{s}[k]\): QAM vector  
 - \(\mathbf{n}[k]\): AWGN
-
+$
 We use:
 - 256-QAM mapping/demapping
 - OFDM modulation (IFFT/FFT + CP)
