@@ -49,18 +49,22 @@ $$
 ---
 
 ## 3. BER Computation
-
+----
 Empirical:
-$$
-\text{BER} = \frac{\# \text{bit errors}}{\# \text{total bits}}
-$$
+
+
+$$ \text{BER} = \frac{\text{bit errors}}{\text{total bits}} $$
+
 
 Approximate for 256-QAM:
-$$
-\text{BER} \approx \frac{4}{k} \left(1 - \frac{1}{\sqrt{M}} \right) Q\left(\sqrt{\frac{3k}{M-1} \cdot \text{SNR}}\right)
-$$
+BER ≈ (4 / k) × (1 - 1/√M) × Q(√(3k / (M−1) × SNR))  
+where:  
+- M = 256  
+- k = log₂(M) = 8  
+- Q(x) is the tail probability of the standard normal distribution
 
-Where $k = \log_2 M = 8$ and $M = 256$.
+
+
 
 ---
 
@@ -73,3 +77,17 @@ from env import PrecoderEnv
 env = PrecoderEnv()
 model = PPO("MlpPolicy", env, verbose=1)
 model.learn(total_timesteps=20000)
+
+
+---
+
+mimo_ofdm_rl_precoder/
+│
+├── README.md
+├── requirements.txt
+├── env.py # PrecoderEnv with CuPy simulation
+├── train_rl.py # PPO training script
+├── eval_ber.py # BER vs SNR plots
+└── src/
+└── mimo_ofdm.py # Core functions: qam_map, ofdm_mod/demod, simulate()
+
