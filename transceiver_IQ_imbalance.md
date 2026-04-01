@@ -12,7 +12,9 @@ The complex baseband signal with gain error ($\Delta G$) and phase error ($\Delt
 $$\tilde{Y}_{BB}(t) = \frac{1}{2} \left[ \left(1-\frac{\Delta G}{2}\right)\cos\frac{\Delta\phi}{2} - j\left(1-\frac{\Delta G}{2}\right)\sin\frac{\Delta\phi}{2} \right] x_I(t) + \frac{1}{2} \left[ -\left(1+\frac{\Delta G}{2}\right)\sin\frac{\Delta\phi}{2} + j\left(1+\frac{\Delta G}{2}\right)\cos\frac{\Delta\phi}{2} \right] x_Q(t)$$
 
 Represented in matrix form:
+
 $$\begin{bmatrix} I_{out} \\ Q_{out} \end{bmatrix} = \begin{bmatrix} \left(1-\frac{\Delta G}{2}\right)\cos\frac{\Delta\phi}{2} & -\left(1+\frac{\Delta G}{2}\right)\sin\frac{\Delta\phi}{2} \\ -\left(1-\frac{\Delta G}{2}\right)\sin\frac{\Delta\phi}{2} & \left(1+\frac{\Delta G}{2}\right)\cos\frac{\Delta\phi}{2} \end{bmatrix} \begin{bmatrix} x_I(t) \\ x_Q(t) \end{bmatrix}$$
+
 
 **Characterizing Degradation (EVM & ISR)**
 To characterize the degradation caused by these imbalances, we evaluate Error Vector Magnitude (EVM) and Image Suppression Ratio (ISR). 
