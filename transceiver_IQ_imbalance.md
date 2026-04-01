@@ -10,11 +10,11 @@
 **Mathematical Model for Tx IQ Imbalance**
 The complex baseband signal with gain error ($\Delta G$) and phase error ($\Delta\phi$) can be represented as:
 
-$$\tilde{Y}_{BB}(t) = \frac{1}{2} \left[ \left(1-\frac{\Delta G}{2}\right)\cos\frac{\Delta\phi}{2} - j\left(1-\frac{\Delta G}{2}\right)\sin\frac{\Delta\phi}{2} \right] x_I(t) + \frac{1}{2} \left[ -\left(1+\frac{\Delta G}{2}\right)\sin\frac{\Delta\phi}{2} + j\left(1+\frac{\Delta G}{2}\right)\cos\frac{\Delta\phi}{2} \right] x_Q(t)$$
+**$$\tilde{Y}_{BB}(t) = \frac{1}{2} \left[ \left(1-\frac{\Delta G}{2}\right)\cos\frac{\Delta\phi}{2} - j\left(1-\frac{\Delta G}{2}\right)\sin\frac{\Delta\phi}{2} \right] x_I(t) + \frac{1}{2} \left[ -\left(1+\frac{\Delta G}{2}\right)\sin\frac{\Delta\phi}{2} + j\left(1+\frac{\Delta G}{2}\right)\cos\frac{\Delta\phi}{2} \right] x_Q(t)$$**
 
 Represented in matrix form:
 
-$$\begin{bmatrix} I_{out} \\ Q_{out} \end{bmatrix} = \begin{bmatrix} \left(1-\frac{\Delta G}{2}\right)\cos\frac{\Delta\phi}{2} & -\left(1+\frac{\Delta G}{2}\right)\sin\frac{\Delta\phi}{2} \\ -\left(1-\frac{\Delta G}{2}\right)\sin\frac{\Delta\phi}{2} & \left(1+\frac{\Delta G}{2}\right)\cos\frac{\Delta\phi}{2} \end{bmatrix} \begin{bmatrix} x_I(t) \\ x_Q(t) \end{bmatrix}$$
+**$$\begin{bmatrix} I_{out} \\ Q_{out} \end{bmatrix} = \begin{bmatrix} \left(1-\frac{\Delta G}{2}\right)\cos\frac{\Delta\phi}{2} & -\left(1+\frac{\Delta G}{2}\right)\sin\frac{\Delta\phi}{2} \\ -\left(1-\frac{\Delta G}{2}\right)\sin\frac{\Delta\phi}{2} & \left(1+\frac{\Delta G}{2}\right)\cos\frac{\Delta\phi}{2} \end{bmatrix} \begin{bmatrix} x_I(t) \\ x_Q(t) \end{bmatrix}$$**
 
 
 **Characterizing Degradation (EVM & ISR)**
@@ -26,10 +26,12 @@ Using small-angle approximations where $\Delta G$ & $\Delta\phi \ll 1$:
 * Neglect $\Delta G \cdot \Delta\phi$ terms for small $x$
 
 This simplifies the ISR relation to:
+
 $$ISR = \frac{\Delta G^2 + \Delta\phi^2}{4}$$
 
 The Signal-to-Noise Ratio (SNR) relates to ISR inversely:
-$$SNR_{dB} = \frac{1}{ISR} = \frac{4}{\Delta G^2 + \Delta\phi^2}$$
+
+**$$SNR_{dB} = \frac{1}{ISR} = \frac{4}{\Delta G^2 + \Delta\phi^2}$$**
 
 **Example Calculations:**
 
@@ -39,6 +41,7 @@ $$SNR_{dB} = \frac{1}{ISR} = \frac{4}{\Delta G^2 + \Delta\phi^2}$$
 ---
 
 ### 2. Rx IQ Imbalance (Case 3)
+
 * **Scenario:** Ideal Transmitter, but Receiver (Rx) has the imbalance.
 
 **Block Diagram (Rx Mixer):**
@@ -47,7 +50,9 @@ $$SNR_{dB} = \frac{1}{ISR} = \frac{4}{\Delta G^2 + \Delta\phi^2}$$
 > *Note: Mixer is driven by the Local Oscillator signal* $e^{j\omega_0 t}$.
 
 The resulting ISR for the receiver follows the same derived ratio as the transmitter:
-$$ISR = \frac{|\beta_{Rx}|^2}{|\alpha_{Rx}|^2} = \frac{\Delta G^2 + \Delta\phi^2}{4}$$
+
+
+**$$ISR = \frac{|\beta_{Rx}|^2}{|\alpha_{Rx}|^2} = \frac{\Delta G^2 + \Delta\phi^2}{4}$$**
 
 ---
 
@@ -69,10 +74,12 @@ There are two primary types of quantizers discussed: **Mid-tread** and **Mid-ris
 * $\Delta q$ = Quantization Step Size.
 
 For a Mid-tread quantizer:
-$$\Delta q = \frac{2A_{clip}}{2^{n_b} - 1}$$
+
+**$$\Delta q = \frac{2A_{clip}}{2^{n_b} - 1}$$**
 
 For a Mid-rise quantizer:
-$$\Delta q = \frac{2A_{clip}}{2^{n_b}}$$
+
+**$$\Delta q = \frac{2A_{clip}}{2^{n_b}}$$**
 
 **Mid-Tread Quantizer Example ($n_b = 3$, $A_{clip} = 1$)**
 For $n_b = 3$, the step size $\Delta q = \frac{2}{7} \approx 0.2857$.
