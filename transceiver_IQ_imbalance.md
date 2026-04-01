@@ -9,6 +9,7 @@
 
 **Mathematical Model for Tx IQ Imbalance**
 The complex baseband signal with gain error ($\Delta G$) and phase error ($\Delta\phi$) can be represented as:
+
 $$\tilde{Y}_{BB}(t) = \frac{1}{2} \left[ \left(1-\frac{\Delta G}{2}\right)\cos\frac{\Delta\phi}{2} - j\left(1-\frac{\Delta G}{2}\right)\sin\frac{\Delta\phi}{2} \right] x_I(t) + \frac{1}{2} \left[ -\left(1+\frac{\Delta G}{2}\right)\sin\frac{\Delta\phi}{2} + j\left(1+\frac{\Delta G}{2}\right)\cos\frac{\Delta\phi}{2} \right] x_Q(t)$$
 
 Represented in matrix form:
@@ -31,6 +32,7 @@ The Signal-to-Noise Ratio (SNR) relates to ISR inversely:
 $$SNR_{dB} = \frac{1}{ISR} = \frac{4}{\Delta G^2 + \Delta\phi^2}$$
 
 **Example Calculations:**
+
 * If $\Delta G = 10\%$ and $\Delta\phi = 0^\circ$, $SNR \approx 26$ dB.
 * If $\Delta G = 10\%$ and $\Delta\phi = 3^\circ$, $SNR \approx 24.3$ dB.
 
@@ -40,6 +42,7 @@ $$SNR_{dB} = \frac{1}{ISR} = \frac{4}{\Delta G^2 + \Delta\phi^2}$$
 * **Scenario:** Ideal Transmitter, but Receiver (Rx) has the imbalance.
 
 **Block Diagram (Rx Mixer):**
+
 > $x(t)$ $\longrightarrow$ **[Quad Mixer]** $\longrightarrow y_{RF}(t) \longrightarrow$ **[ $Re\{\}$ ]** $\longrightarrow y(t)$
 > *Note: Mixer is driven by the Local Oscillator signal* $e^{j\omega_0 t}$.
 
@@ -51,6 +54,7 @@ $$ISR = \frac{|\beta_{Rx}|^2}{|\alpha_{Rx}|^2} = \frac{\Delta G^2 + \Delta\phi^2
 ## Part 2: Data Converters (ADC / DAC)
 
 ### Core Concepts
+
 * **Processes:** Sampling, Quantization, and Encoding.
 * **Key Metrics & Terminology:** Nyquist criteria, INL (Integral Non-Linearity), DNL (Differential Non-Linearity), Dynamic Range, Sensitivity, Resolution.
 * **Sources of Error:** There are two main sources of error: Sample/Hold noise and Quantization noise/error.
