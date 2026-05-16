@@ -1,6 +1,6 @@
-# Sample TSTP Scripts for Wi‑Fi 6 and WLAN Security Testing
+# TSTP Scripts for Wi‑Fi 6 and WLAN Security Testing
 
-These are educational sample TSTP-style scripts and procedures relevant to WLAN and Wi‑Fi 6 security validation. They demonstrate Linux scripting, packet capture automation, authentication validation, WPA2/WPA3 security testing, log analysis, and Wi‑Fi traffic inspection.
+TSTP-style scripts and procedures relevant to WLAN and Wi‑Fi 6 security validation. They demonstrate Linux scripting, packet capture automation, authentication validation, WPA2/WPA3 security testing, log analysis, and Wi‑Fi traffic inspection.
 
 ---
 
@@ -313,7 +313,7 @@ cat mu_mimo.txt
 
 ---
 
-# Strong Interview Line
+# summary
 
 “WLAN TSTP automation combines packet-level analysis, Linux scripting, authentication validation, traffic inspection, and Wi‑Fi protocol testing to ensure secure and standards-compliant wireless network operation.”
 
