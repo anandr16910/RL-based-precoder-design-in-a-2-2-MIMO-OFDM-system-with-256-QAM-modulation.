@@ -313,7 +313,7 @@ cat mu_mimo.txt
 
 ---
 
-# Strong Interview Line
+# Summary
 
 “WLAN TSTP automation combines packet-level analysis, Linux scripting, authentication validation, traffic inspection, and Wi‑Fi protocol testing to ensure secure and standards-compliant wireless network operation.”
 
